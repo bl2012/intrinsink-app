@@ -63,3 +63,12 @@ export class VideoCall extends React.Component {
 		);
 	}
 }
+
+export class Image extends React.Component{
+	render(){
+		return (
+			<p className="image-container" img={this.props.})>
+		)}
+	}
+	
+}

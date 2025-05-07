@@ -2,6 +2,8 @@ import React from 'react';
 import firebase from './firebase.js';
 import {Button, TextBox} from './Common.js';
 
+const mediLogo = "../images/Medipair_transp2.png"
+
 class Audience extends React.Component {
 	constructor(props) {
 		super(props);
@@ -85,6 +87,7 @@ class Audience extends React.Component {
 		}
 		let newText = ""
 		let textType = ""
+		let myImg = this.props.settings.
 		if (this.props.performance.audience) {
 			newText = this.props.performance.audience.replace(/\w+: /, '').trim();
 			textType = this.props.performance.audience.slice(0, this.props.performance.audience.indexOf(": "));
@@ -135,6 +138,9 @@ class Audience extends React.Component {
 			} else {
 				return (
 					<div>
+						<p>
+							<img href=
+						</p>
 						<p tabIndex="0" role="alert">{newText.trim()}</p>
 					</div>
 				);
@@ -143,7 +149,9 @@ class Audience extends React.Component {
 			return (
 				<div aria-live="off">
 					<p>{this.props.settings.defaultAudienceMessage}</p>
+					<p>	<img src={mediLogo} alt="Medipair Automations"></p>
 				</div>
+				}
 			);
 		}
 	}
